@@ -7,9 +7,10 @@ Vicial is a dedicated violence update platform designed to allow users to post r
 2. Driving Mode: Drivers receive route-based alerts on the map if a violent update falls within their planned path.
 3. Authentication: Custom sign‑in and sign‑up pages implemented with Clerk.
 4. Image Uploads: Integrated with ImageKit for image storage.
-5. Machine Learning Verification: A Flask‑based ML microservice validates the caption and image using a CNN and a RandomForest model before saving.
-6. Automatic Data Cleanup: Violence update posts automatically expire after 24 hours using MongoDB TTL indexes.
-7. Real-time Feed: The feed component refreshes automatically to show current updates
+5. Machine Learning Verification: A Flask‑based ML microservice validates the caption using a LSTM model and image using a CNN model before sending to the next verification step.
+6. Police SOS Verification: After successful verification on microservice, the caption and image then sent to the nearby police station where the violence occurred and if they verify the data as correct then only that post gets saved and displayed in the Vicial platform. 
+7. Automatic Data Cleanup: Violence update posts automatically expire after 24 hours using MongoDB TTL indexes.
+8. Real-time Feed: The feed component refreshes automatically to show current updates
 
 ## Tech Stack :- 
 1. Frontend: Next.js (App Directory), React, TypeScript, Tailwind CSS
